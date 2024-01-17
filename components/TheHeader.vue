@@ -1,24 +1,10 @@
 <script setup>
-const config = useRuntimeConfig();
-const { data } = await useFetch(config.public.apiBase, {
-    method: 'get',
-    query: {
-        query: `
-        query NewQuery {
-  pages {
-    nodes {
-      title
-      uri
-    }
-  }
-}`
-    }, transform(data) {
-        let temp = []
-        data.data.pages.nodes.map( el => temp.push({'title': el.title,'uri': el.uri}))
-        return temp
-    }
-});
+    const props = defineProps(['title'])
+    const { data } = await useFetch('/api/data?c=pages');
 
+    useHead({
+        title: props.title
+    })
 </script>
 
 <template>
