@@ -96,6 +96,7 @@ export default defineEventHandler(async (event) => {
       })
 
       return data.data.nodeByUri
+      
     }
 
     return null

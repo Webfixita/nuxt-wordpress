@@ -5,7 +5,7 @@ const { data } = await useFetch('/api/data?c=posts');
 <template>
     <div>
         <TheHeader :title="'Home'"></TheHeader>
-        <div class="grid gap-8 grid-cols-1 lg:grid-cols-3 p-6">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <Post v-for="post in data" :key="post.uri" :post="post"></Post>
         </div>
     </div>

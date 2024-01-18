@@ -7,7 +7,7 @@
 <template>
     <div>
         <TheHeader :title="data.title"></TheHeader>
-        <main class="bg-gray-100 container mx-auto mt-6 p-6 rounded-lg">
+        <main class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <h1 class="text-4xl">{{ data.title }}</h1>
             <article class="mt-4 space-y-2" v-html="data.content"></article>
         </main>
