@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-      '@nuxtjs/tailwindcss'
-  ]
+      '@nuxtjs/tailwindcss',
+      'nuxt-headlessui'
+  ],
+  runtimeConfig: {
+    wpapi: process.env.API_BASE || 'fallback',
+  },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  }
 })

@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Headless WP + Nuxt 3 Starter Bilerplate (Tailwind + Headless UI + Heroicons)
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -54,6 +54,9 @@ yarn build
 
 # bun
 bun run build
+
+# static build
+npx nuxi generate
 ```
 
 Locally preview production build:

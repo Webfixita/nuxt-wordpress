@@ -1,7 +1,7 @@
 <script setup>
     const route = useRoute();
     const uri = route.params.uri;
-    const { data } = await useFetch('/api/data?post_uri='+uri);
+    const { data } = await useFetch('/api/post?uri='+uri);
 </script>
 
 <template>
