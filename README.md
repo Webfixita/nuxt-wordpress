@@ -1,4 +1,4 @@
-# Headless WP + Nuxt 3 Starter Bilerplate (Tailwind + Headless UI + Heroicons)
+# Headless WP + Nuxt 3 Starter boilerplate (Tailwind + Headless UI + Heroicons)
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
