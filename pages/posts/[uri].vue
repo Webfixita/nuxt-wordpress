@@ -2,6 +2,13 @@
     const route = useRoute();
     const uri = route.params.uri;
     const { data } = await useFetch('/api/post?uri='+uri);
+
+    if (!data.value) {
+        throw createError({
+            statusCode: 404,
+            statusMessage: 'Page Not Found'
+        })
+    }
 </script>
 
 <template>
