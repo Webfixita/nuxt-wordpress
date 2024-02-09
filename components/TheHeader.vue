@@ -2,7 +2,7 @@
     import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
     import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid'
     const props = defineProps(['title'])
-    const { data } = await useFetch('/api/pages');
+    const { data } = await useFetch('/api/menuItems');
 
     useHead({
         title: props.title
@@ -29,7 +29,7 @@
                         </div>
                         <div class="hidden sm:ml-6 sm:block">
                             <div class="flex space-x-4">
-                                <NuxtLink v-for="page in data" :to='page.uri' class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" :key="page.uri" :page="page">{{ page.title }}</NuxtLink>
+                                <NuxtLink v-for="menuItem in data" :to='menuItem.uri' class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" :key="menuItem.uri">{{ menuItem.label }}</NuxtLink>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
 
             <DisclosurePanel class="sm:hidden">
                 <div class="space-y-1 px-2 pb-3 pt-2">
-                    <NuxtLink v-for="page in data" :to='page.uri' class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" :key="page.uri" :page="page">{{ page.title }}</NuxtLink>
+                    <NuxtLink v-for="menuItem in data" :to='menuItem.uri' class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" :key="menuItem.uri">{{ menuItem.label }}</NuxtLink>
                 </div>
             </DisclosurePanel>
         </Disclosure>
